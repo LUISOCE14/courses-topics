@@ -1,0 +1,273 @@
+/* Custom Styles */
+:root {
+    --color-primary: #0d6efd;
+    --color-success: #198754;
+    --color-warning: #ffc107;
+    --color-info: #0dcaf0;
+    --color-danger: #dc3545;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Header Icon */
+  .icon-gradient {
+    background-color: var(--color-primary);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Stats Icons */
+  .stat-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Card Enhancements */
+  .card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Table Enhancements */
+  .table {
+    border-collapse: separate; /* Allows border-radius on cells */
+    border-spacing: 0; /* Removes default cell spacing */
+  }
+
+  /* Specific border for table header */
+  .table thead th {
+    border-bottom: 2px solid #dee2e6;
+  }
+
+  .table tbody tr {
+    border-bottom: 1px solid #e9ecef; /* Subtle border between rows */
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.03); /* Slightly darker hover */
+  }
+  
+  /* Badge Styles - Keeping custom colors */
+  .badge.bg-info {
+    background-color: #e0f7fa !important;
+    color: #00838f !important;
+  }
+
+  .badge.bg-danger {
+    background-color: #fde0e0 !important;
+    color: #c0392b !important;
+  }
+
+  .badge.bg-secondary {
+    background-color: #e9ecef !important;
+    color: #495057 !important;
+  }
+  
+  /* Empty State */
+  .empty-icon {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .empty-icon i {
+    font-size: 3rem;
+    color: white;
+  }
+  
+  /* Button Enhancements */
+  .btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+  }
+  
+  /* Search Input */
+  .input-group .form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  }
+  
+  /* Modal Enhancements */
+  .modal-content {
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-header {
+    background-color: var(--color-primary);
+    color: white;
+    border-bottom: none;
+  }
+  
+  .modal-header .btn-close {
+    filter: invert(1);
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Responsive Improvements */
+  @media (max-width: 768px) {
+    .d-flex.justify-content-between {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .btn-lg {
+      width: 100%;
+    }
+  
+    .input-group {
+      width: 100% !important;
+    }
+  }
+  
+  /* Animation for new rows */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.5s ease-out;
+  }
+  
+  /* Loading State */
+  .loading {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
+ 
+  
+  /* Action Buttons */
+  .btn-sm {
+    padding: 0.375rem 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: scale(1.05);
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: var(--color-danger);
+    border-color: var(--color-danger);
+    transform: scale(1.05);
+  }
+  
+  .table tbody tr:hover .btn-outline-primary,
+  .table tbody tr:hover .btn-outline-danger {
+    opacity: 1;
+  }
+  
+  .btn-outline-primary,
+  .btn-outline-danger {
+    opacity: 0.7;
+  }
+
+
+
+  /* Animación de sacudida horizontal para errores */
+  @keyframes shake-horizontal {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+        transform: translateX(10px);
+    }
+    80% {
+        transform: translateX(8px);
+    }
+    90% {
+        transform: translateX(-8px);
+    }
+}
+
+/* Clases de Bootstrap para validación y errores */
+.is-invalid {
+    border-color: #dc3545 !important; /* Color rojo de Bootstrap para errores */
+}
+
+.invalid-feedback {
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+}
+
+/* Clase para aplicar la animación */
+.shake-horizontal {
+    animation: shake-horizontal 1.0s; /* Duración de la animación */
+}
+
+/* Estilos para Select2 en estado de error (si lo usaras) */
+.select2-invalid .select2-selection {
+    border-color: #dc3545 !important; /* Rojo Bootstrap */
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* Alinea mejor el mensaje de error con Select2 */
+.select2-container + .invalid-feedback {
+    margin-top: -0.75rem;
+    font-size: 0.875em;
+    color: #dc3545;
+    display: block !important;
+}
+
+/* Aplica la misma sombra de error a todos los campos con error */
+input.is-invalid,
+select.is-invalid,
+textarea.is-invalid {
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
