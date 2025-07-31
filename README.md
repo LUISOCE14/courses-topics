@@ -93,4 +93,4 @@ Proyecto Web Full-Stack
 
 ---
 
-*Este reporte documenta un ciclo completo de desarrollo web, desde la configuración inicial hasta las pruebas de integración final.*
+
